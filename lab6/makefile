@@ -2,7 +2,7 @@ alltasks: task1 task2 task3 task4 task5 task6 task7 task8
 task1: prep
 	strace -tt -T -y -e trace=file -o logs/01.strace ./tasks/01-permissions/broken.sh || true
 task2: prep
-	strace -tt -T -s 200 -e trace=file -o logs/02.strace ./tasks/02-missing-file/broken.sh || true
+	strace -e trace=file -s 120 -tt -T -e trace=file -o logs/02.strace ./tasks/02-missing-file/broken.sh || true
 task3: prep
 	strace -f -tt -T -yy -s 200 -o logs/03.strace -e trace=network,recvfrom,sendto,connect,getsockopt,select,poll,epoll_pwait python3 tasks/03-dns-timeout/client.py || true
 task4: prep
