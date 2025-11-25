@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cat /opt/app/config/settings.yaml
+exec 3< /opt/app/config/settings.yaml

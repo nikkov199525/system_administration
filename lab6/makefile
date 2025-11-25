@@ -1,4 +1,4 @@
-alltasks: task1 task2 task3 task4 task5 task6 task7 task8
+alltasks: task1 task2 task3 task4 task6 task7 task8 task5
 
 task1: prep
 	strace -tt -T -y -e trace=file -o logs/01.strace ./tasks/01-permissions/broken.sh || true
@@ -16,6 +16,7 @@ task5: prep
 	strace -f -tt -T -s 200 -y -o logs/05.strace python3 tasks/05-file-lock/lock.py &
 	sleep 2
 	pkill -f "lock.py"
+	wait $$PY_PID 2>/dev/null || true
 
 task6: prep
 	strace -tt -T -e trace=write,fsync,futex -o logs/06.strace python3 tasks/06-slow-fsync/slow_write.py || true

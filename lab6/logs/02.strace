@@ -1,38 +1,39 @@
-17:09:07.124070 execve("./tasks/02-missing-file/broken.sh", ["./tasks/02-missing-file/broken.sh"], 0xffffc023b040 /* 31 vars */) = 0 <0.004195>
-17:09:07.133014 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (Нет такого файла или каталога) <0.000397>
-17:09:07.136761 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000923>
-17:09:07.140256 openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000502>
-17:09:07.157265 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3 <0.000435>
-17:09:07.161244 execve("/usr/local/bin/bash", ["bash", "./tasks/02-missing-file/broken.sh"], 0xffffe51fdd18 /* 31 vars */) = -1 ENOENT (Нет такого файла или каталога) <0.000813>
-17:09:07.163204 execve("/usr/bin/bash", ["bash", "./tasks/02-missing-file/broken.sh"], 0xffffe51fdd18 /* 31 vars */) = 0 <0.004593>
-17:09:07.171481 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (Нет такого файла или каталога) <0.000303>
-17:09:07.172914 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000529>
-17:09:07.176028 openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000496>
-17:09:07.183404 openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000446>
-17:09:07.203477 openat(AT_FDCWD, "/dev/tty", O_RDWR|O_NONBLOCK) = 3 <0.000394>
-17:09:07.207735 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3 <0.000474>
-17:09:07.211351 openat(AT_FDCWD, "/usr/lib/aarch64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000319>
-17:09:07.226190 newfstatat(AT_FDCWD, "/home/hlebushek/strace-lab", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000506>
-17:09:07.228034 newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000270>
-17:09:07.229230 newfstatat(AT_FDCWD, "/home", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000265>
-17:09:07.230419 newfstatat(AT_FDCWD, "/home/hlebushek", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0 <0.000272>
-17:09:07.231625 newfstatat(AT_FDCWD, "/home/hlebushek/strace-lab", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000401>
-17:09:07.232745 newfstatat(AT_FDCWD, "/home/hlebushek", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0 <0.000253>
-17:09:07.235134 newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000436>
-17:09:07.236352 newfstatat(AT_FDCWD, "/usr/local/bin/bash", 0xffffe4a72078, 0) = -1 ENOENT (Нет такого файла или каталога) <0.000260>
-17:09:07.237528 newfstatat(AT_FDCWD, "/usr/bin/bash", {st_mode=S_IFREG|0755, st_size=1412096, ...}, 0) = 0 <0.000280>
-17:09:07.238553 newfstatat(AT_FDCWD, "/usr/bin/bash", {st_mode=S_IFREG|0755, st_size=1412096, ...}, 0) = 0 <0.000266>
-17:09:07.242266 faccessat(AT_FDCWD, "/usr/bin/bash", X_OK) = 0 <0.000314>
-17:09:07.243516 newfstatat(AT_FDCWD, "/usr/bin/bash", {st_mode=S_IFREG|0755, st_size=1412096, ...}, 0) = 0 <0.000262>
-17:09:07.247214 faccessat(AT_FDCWD, "/usr/bin/bash", R_OK) = 0 <0.000349>
-17:09:07.252208 openat(AT_FDCWD, "./tasks/02-missing-file/broken.sh", O_RDONLY) = 3 <0.000091>
-17:09:07.252617 newfstatat(AT_FDCWD, "./tasks/02-missing-file/broken.sh", {st_mode=S_IFREG|0755, st_size=71, ...}, 0) = 0 <0.000053>
-17:09:07.254533 newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000061>
-17:09:07.254888 newfstatat(AT_FDCWD, "/usr/local/bin/cat", 0xffffe4a71fe8, 0) = -1 ENOENT (Нет такого файла или каталога) <0.000053>
-17:09:07.255103 newfstatat(AT_FDCWD, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=68088, ...}, 0) = 0 <0.000058>
-17:09:07.255313 newfstatat(AT_FDCWD, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=68088, ...}, 0) = 0 <0.000054>
-17:09:07.255897 faccessat(AT_FDCWD, "/usr/bin/cat", X_OK) = 0 <0.000077>
-17:09:07.256124 newfstatat(AT_FDCWD, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=68088, ...}, 0) = 0 <0.000055>
-17:09:07.256735 faccessat(AT_FDCWD, "/usr/bin/cat", R_OK) = 0 <0.000067>
-17:09:07.263727 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5816, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
-17:09:07.265337 +++ exited with 1 +++
+08:27:58.544736 execve("./tasks/02-missing-file/broken.sh", ["./tasks/02-missing-file/broken.sh"], 0xffffecee0518 /* 50 vars */) = 0 <0.001556>
+08:27:58.547746 faccessat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/etc/ld.so.preload", R_OK) = -1 ENOENT (Нет такого файла или каталога) <0.000207>
+08:27:58.549501 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache> <0.000102>
+08:27:58.550334 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libc.so.6> <0.000105>
+08:27:58.554583 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3</usr/lib/locale/locale-archive> <0.000146>
+08:27:58.556300 execve("/usr/local/bin/bash", ["bash", "./tasks/02-missing-file/broken.sh"], 0xfffffeee9108 /* 50 vars */) = -1 ENOENT (Нет такого файла или каталога) <0.000368>
+08:27:58.557208 execve("/usr/bin/bash", ["bash", "./tasks/02-missing-file/broken.sh"], 0xfffffeee9108 /* 50 vars */) = 0 <0.001698>
+08:27:58.559831 faccessat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/etc/ld.so.preload", R_OK) = -1 ENOENT (Нет такого файла или каталога) <0.000133>
+08:27:58.560461 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache> <0.000147>
+08:27:58.561383 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/lib/aarch64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libtinfo.so.6.5> <0.000167>
+08:27:58.563312 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libc.so.6> <0.000161>
+08:27:58.568427 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/dev/tty", O_RDWR|O_NONBLOCK) = 3</dev/tty> <0.000276>
+08:27:58.569875 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3</usr/lib/locale/locale-archive> <0.000133>
+08:27:58.571112 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/lib/aarch64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/gconv/gconv-modules.cache> <0.000130>
+08:27:58.574423 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/home/hlebushek/system_administration/lab6", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000146>
+08:27:58.575127 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, ".", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000104>
+08:27:58.575832 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/home", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000103>
+08:27:58.576326 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/home/hlebushek", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0 <0.000081>
+08:27:58.576732 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/home/hlebushek/system_administration", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000090>
+08:27:58.577122 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/home/hlebushek/system_administration/lab6", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000087>
+08:27:58.577531 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/home/hlebushek/system_administration", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000067>
+08:27:58.578207 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, ".", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000133>
+08:27:58.578804 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/local/bin/bash", 0xffffd10e3868, 0) = -1 ENOENT (Нет такого файла или каталога) <0.000105>
+08:27:58.579355 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/bash", {st_mode=S_IFREG|0755, st_size=1412096, ...}, 0) = 0 <0.000097>
+08:27:58.579894 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/bash", {st_mode=S_IFREG|0755, st_size=1412096, ...}, 0) = 0 <0.000066>
+08:27:58.580566 faccessat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/bash", X_OK) = 0 <0.000118>
+08:27:58.581054 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/bash", {st_mode=S_IFREG|0755, st_size=1412096, ...}, 0) = 0 <0.000085>
+08:27:58.581856 faccessat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/bash", R_OK) = 0 <0.000147>
+08:27:58.583576 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "./tasks/02-missing-file/broken.sh", O_RDONLY) = 3</home/hlebushek/system_administration/lab6/tasks/02-missing-file/broken.sh> <0.000114>
+08:27:58.584220 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "./tasks/02-missing-file/broken.sh", {st_mode=S_IFREG|0775, st_size=71, ...}, 0) = 0 <0.000095>
+08:27:58.586448 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, ".", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0 <0.000089>
+08:27:58.586975 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/local/bin/cat", 0xffffd10e37d8, 0) = -1 ENOENT (Нет такого файла или каталога) <0.000060>
+08:27:58.587281 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=68088, ...}, 0) = 0 <0.000062>
+08:27:58.587545 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=68088, ...}, 0) = 0 <0.000060>
+08:27:58.588121 faccessat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/cat", X_OK) = 0 <0.000638>
+08:27:58.589337 newfstatat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=68088, ...}, 0) = 0 <0.000069>
+08:27:58.590056 faccessat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/usr/bin/cat", R_OK) = 0 <0.000083>
+08:27:58.597026 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=4327, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+08:27:58.598921 +++ exited with 1 +++
