@@ -10,7 +10,7 @@
 
 ## 02. Нет такого файла/каталога
   Ключевая строка   (logs/02.strace)
-openat(AT_FDCWD, "/opt/app/config/settings.yaml", O_RDONLY) = -1 ENOENT (Нет такого файла или каталога)
+09:07:11.455946 openat(AT_FDCWD</home/hlebushek/system_administration/lab6>, "/opt/app/config/settings.yaml", O_RDONLY) = -1 ENOENT (Нет такого файла или каталога) <0.000122>
  
 Причина   — файл или один из сегментов пути не существует  
 Фикс   — создать файл/директории или поправить путь
@@ -29,7 +29,7 @@ openat(AT_FDCWD, "/opt/app/config/settings.yaml", O_RDONLY) = -1 ENOENT (Нет 
 
 ## 05. Блокировка файла
 Ключевая строка   (logs/05.strace)
-flock(3</tmp/shared.lock>, LOCK_EX) = ? ERESTARTSYS (To be restarted if SA_RESTART is set) <0.930098>
+6055  09:07:14.155013 flock(3</tmp/shared.lock>, LOCK_EX) = 0 <0.000223>
 Причина   — файл уже заблокирован первым экземпляром  
 Фикс   — завершить первый процесс
 
